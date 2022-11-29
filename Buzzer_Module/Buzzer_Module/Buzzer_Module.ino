@@ -18,10 +18,10 @@ delay(500);
 
 int playing = 0;
 void tone(byte pin, int freq) {
-  ledcSetup(0, 2000, 8); // setup beeper
-  ledcAttachPin(pin, 0); // attach beeper
-  ledcWriteTone(0, freq); // play tone
-  playing = pin; // store pin
+  ledcSetup(0, 2000, 8);
+  ledcAttachPin(pin, 0);
+  ledcWriteTone(0, freq);
+  playing = pin;
 }
 void noTone() {
   tone(playing, 0);
